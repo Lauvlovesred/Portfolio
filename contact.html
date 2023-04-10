@@ -102,49 +102,91 @@ https://templatemo.com/tm-572-designer
   <!-- Scripts -->
   <script>
     var questions = [
-  "What have been some of the biggest changes in our relationship since our last check-in?",
-  "What have we been doing that has brought us closer together?",
-  "What could we be doing better to communicate our needs and wants?",
-  "What are some things we can do to maintain the spark in our relationship?",
-  "What are your top three priorities in our relationship right now?",
-  "What have you learned about yourself since our last check-in?",
-  "What is one thing you appreciate about our relationship?",
-  "What is one thing you want to improve in our sex life?",
-  "What are some things you want to try sexually?",
-  "What is one thing you need from me that you're not getting?",
-  "What is one thing you're afraid to bring up but want to talk about?",
-  "What are some things we can do to make each other feel loved and appreciated?",
-  "What are some things you want to achieve together in the next year?",
-  "What are some things we can do to support each other's personal goals?",
-  "What are some things we can do to deepen our emotional connection?",
-  "What are some things we can do to improve our physical intimacy?",
-  "What are some things you want to accomplish together as a team?",
-  "What are some things we can do to support each other's mental health?",
-  "What is one thing you want to learn from me?",
-  "What is one thing I can do to make you feel more supported?",
-  "What is one thing you want to learn about me?",
-  "What are some things we can do to keep the romance alive in our relationship?",
-  "What is one thing you want to achieve in your personal life?",
-  "What is one thing you're grateful for in our relationship?",
-  "What is one thing you're looking forward to in our future together?",
-  "What is one thing you're proud of us for?",
-  "What is one thing that always turns you on?",
-  "What is one thing that always turns you off?",
-  "What is one thing you want to try but are scared to?",
-  "What is one thing you want to try that you haven't before?",
-  "What is one thing you want to try again?",
-  "What is one thing you want to teach me emotionally?",
-  "What is one thing you want to learn from me emotionally?",
-  "Are you happy being in a relationship with me?",
-  "Are you satisfied in our relationship?",
-  "Are your needs being met in our relationship?",
-  "Are you learning anything from me that helps you grow?",
-  "Are you concerned about anything in our relationship recently?",
-  "What kind of dates do you want to try?",
-  "Do you see me as someone you can learn from and how?",
-  "If I was in a room with you right now, what do you want to do with me?"
+      {
+        question: "What have been some of the biggest changes in our relationship since our last check-in?",
+        gifUrl: "https://media.giphy.com/media/3o6ZsT7PqGnZBNFmTq/giphy.gif"
+      },
+      {
+        question: "What have we been doing that has brought us closer together?",
+        gifUrl: "https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif"
+      },
+      {
+        question: "What could we be doing better to communicate our needs and wants?",
+        gifUrl: "https://media.giphy.com/media/1jKXE5REdGvN8/giphy.gif"
+      },
+      {
+        question: "What are some things we can do to maintain the spark in our relationship?",
+        gifUrl: "https://media.giphy.com/media/26tPcnx0yP9if2EVi/giphy.gif"
+      },
+      {
+        question: "What are your top three priorities in our relationship right now?",
+        gifUrl: "https://media.giphy.com/media/hOz4wLKZ5tFMc/giphy.gif"
+      },
+      {
+        question: "What have you learned about yourself since our last check-in?",
+        gifUrl: "https://media.giphy.com/media/3ohzdTgAOmEEzYbYR6/giphy.gif"
+      },
+      {
+        question: "What is one thing you appreciate about our relationship?",
+        gifUrl: "https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif"
+      },
+      {
+        question: "What is one thing you want to improve in our sex life?",
+        gifUrl: "https://media.giphy.com/media/3o6ZtpxSZbQRRnwCKQ/giphy.gif"
+      },
+      {
+        question: "What are some things you want to try sexually?",
+        gifUrl: "https://media.giphy.com/media/5wWf7H89EQ0K4/giphy.gif"
+      },
+      {
+        question: "What is one thing you need from me that you're not getting?",
+        gifUrl: "https://media.giphy.com/media/26tnjKtVxLCTJQyWw/giphy.gif"
+      },
+      {
+        question: "What is one thing you're afraid to bring up but want to talk about?",
+        gifUrl: "https://media.giphy.com/media/hjFsPZ3JW8GRu/giphy.gif"
+      },
+      {
+        question: "What are some things we can do to make each other feel loved and appreciated?",
+        gifUrl: "https://media.giphy.com/media/26tknCqiJrTfTJzMc/giphy.gif"
+      },
+      {
+        question: "What are some things you want to achieve together in the next year?",
+        gifUrl: "https://media.giphy.com/media/xUOwGa82nv7MT1BoCw/giphy.gif"
+      },
+      {
+        question: "What are some things we can do to support each other's personal goals?",
+        gifUrl: "https://media.giphy.com/media/gJUGOwmMbd9ZG/giphy.gif"
+      },
+      "What are some things we can do to deepen our emotional connection?",
+      "What are some things we can do to improve our physical intimacy?",
+      "What are some things you want to accomplish together as a team?",
+      "What are some things we can do to support each other's mental health?",
+      "What is one thing you want to learn from me?",
+      "What is one thing I can do to make you feel more supported?",
+      "What is one thing you want to learn about me?",
+      "What are some things we can do to keep the romance alive in our relationship?",
+      "What is one thing you want to achieve in your personal life?",
+      "What is one thing you're grateful for in our relationship?",
+      "What is one thing you're looking forward to in our future together?",
+      "What is one thing you're proud of us for?",
+      "What is one thing that always turns you on?",
+      "What is one thing that always turns you off?",
+      "What is one thing you want to try but are scared to?",
+      "What is one thing you want to try that you haven't before?",
+      "What is one thing you want to try again?",
+      "What is one thing you want to teach me emotionally?",
+      "What is one thing you want to learn from me emotionally?",
+      "Are you happy being in a relationship with me?",
+      "Are you satisfied in our relationship?",
+      "Are your needs being met in our relationship?",
+      "Are you learning anything from me that helps you grow?",
+      "Are you concerned about anything in our relationship recently?",
+      "What kind of dates do you want to try?",
+      "Do you see me as someone you can learn from and how?",
+      "If I was in a room with you right now, what do you want to do with me?"
     ];
-
+  
     var usedQuestions = [];
 
     function spin() {
@@ -156,7 +198,12 @@ https://templatemo.com/tm-572-designer
             document.getElementById("question").innerHTML = questions[randomIndex];
         }
     }
-</script>
+    </script>
+
+
+
+
+
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
