@@ -102,59 +102,68 @@ https://templatemo.com/tm-572-designer
   <!-- Scripts -->
   <script>
     var questions = [
-  "What have been some of the biggest changes in our relationship since our last check-in?",
-  "What have we been doing that has brought us closer together?",
-  "What could we be doing better to communicate our needs and wants?",
-  "What are some things we can do to maintain the spark in our relationship?",
-  "What are your top three priorities in our relationship right now?",
-  "What have you learned about yourself since our last check-in?",
-  "What is one thing you appreciate about our relationship?",
-  "What is one thing you want to improve in our sex life?",
-  "What are some things you want to try sexually?",
-  "What is one thing you need from me that you're not getting?",
-  "What is one thing you're afraid to bring up but want to talk about?",
-  "What are some things we can do to make each other feel loved and appreciated?",
-  "What are some things you want to achieve together in the next year?",
-  "What are some things we can do to support each other's personal goals?",
-  "What are some things we can do to deepen our emotional connection?",
-  "What are some things we can do to improve our physical intimacy?",
-  "What are some things you want to accomplish together as a team?",
-  "What are some things we can do to support each other's mental health?",
-  "What is one thing you want to learn from me?",
-  "What is one thing I can do to make you feel more supported?",
-  "What is one thing you want to learn about me?",
-  "What are some things we can do to keep the romance alive in our relationship?",
-  "What is one thing you want to achieve in your personal life?",
-  "What is one thing you're grateful for in our relationship?",
-  "What is one thing you're looking forward to in our future together?",
-  "What is one thing you're proud of us for?",
-  "What is one thing that always turns you on?",
-  "What is one thing that always turns you off?",
-  "What is one thing you want to try but are scared to?",
-  "What is one thing you want to try that you haven't before?",
-  "What is one thing you want to try again?",
-  "What is one thing you want to teach me emotionally?",
-  "What is one thing you want to learn from me emotionally?",
-  "Are you happy being in a relationship with me?",
-  "Are you satisfied in our relationship?",
-  "Are your needs being met in our relationship?",
-  "Are you learning anything from me that helps you grow?",
-  "Are you concerned about anything in our relationship recently?",
-  "What kind of dates do you want to try?",
-  "Do you see me as someone you can learn from and how?",
-  "If I was in a room with you right now, what do you want to do with me?"
+    "How do you feel our relationship has evolved since our last check-in?",
+"What activities or experiences have brought us closer together recently?",
+"Do you have any suggestions for improving our communication and understanding each other's needs and desires?",
+"How can we keep the spark alive and maintain a strong connection in our relationship?",
+"What are the top three priorities you think we should focus on in our relationship at this stage?",
+"Have you discovered anything new about yourself in the context of our relationship since our last discussion?",
+"What's one thing you genuinely appreciate about our relationship and the way we interact?",
+"Is there anything specific you'd like to improve or explore in our intimate life?",
+"What are some new things you'd like to explore or experiment with sexually?",
+"Is there anything you need from me that you feel you're not currently getting?",
+"What's something you've been hesitant to bring up but feel it's essential to discuss?",
+"How can we make each other feel even more loved and valued in our day-to-day lives?",
+"What are some goals or aspirations you'd like us to pursue together in the coming year?",
+"How can we best support each other in achieving our personal goals and dreams?",
+"How can we deepen our emotional connection and understanding of each other?",
+"What are some ways we can enhance our physical intimacy and make it more fulfilling?",
+"What joint accomplishments or projects would you like us to work on as a team?",
+"How can we support each other's mental well-being and overall happiness?",
+"What's one thing you'd love to learn from me or discover about me?",
+"What can I do to make you feel more supported and cherished in our relationship?",
+"What's one thing you're curious to learn about me or my past experiences?",
+"What steps can we take to keep the romance alive and exciting between us?",
+"What's one personal goal or ambition you'd like to pursue in your life?",
+"What's one thing you're sincerely grateful for in our relationship?",
+"What future experiences or milestones are you looking forward to sharing with me?",
+"What makes you proud of us as a couple and our journey together?",
+"What's one thing that never fails to turn you on or attract you to me?",
+"What's one thing that can sometimes turn you off or create a disconnect between us?",
+"What's one thing you'd like to try in our relationship but feel a bit apprehensive about?",
+"What's one new experience or adventure you'd like to explore together with me?",
+"Is there anything from our past that you'd like to revisit or do again?",
+"What's one emotional aspect you'd like me to understand better or help you with?",
+"What do you want to learn from me emotionally, and how can I support you in that?",
+"Do you feel happy and fulfilled in our relationship at this stage?",
+"Do you believe our relationship meets your expectations and satisfies your needs?",
+"Are there any specific needs or desires you have that you feel are not being met in our relationship?",
+"Is there anything you've learned from me that has positively impacted your personal growth?",
+"Do you have any concerns or worries about our relationship that you'd like to discuss?",
+"What kinds of dates or activities would you like us to explore together?",
+"Do you see me as someone you can learn from, and in what ways do you think that could be?",
+"If we were together right now, what's one thing you'd love to do or experience with me?"
     ];
 
     var usedQuestions = [];
 
     function spin() {
-        var randomIndex = Math.floor(Math.random() * questions.length);
-        if (usedQuestions.includes(randomIndex)) {
-            spin();
-        } else {
-            usedQuestions.push(randomIndex);
-            document.getElementById("question").innerHTML = questions[randomIndex];
-        }
+            if (usedQuestions.length === questions.length) {
+                // If all questions have been used, reset the usedQuestions array.
+                usedQuestions = [];
+            }
+
+            var remainingQuestions = questions.filter(function (question, index) {
+                return !usedQuestions.includes(index);
+            });
+
+            var randomIndex = Math.floor(Math.random() * remainingQuestions.length);
+            var questionToShow = remainingQuestions[randomIndex];
+
+            var questionIndex = questions.indexOf(questionToShow);
+            usedQuestions.push(questionIndex);
+
+            document.getElementById("question").innerHTML = questionToShow;
     }
 </script>
 
