@@ -31,26 +31,7 @@ https://templatemo.com/tm-572-designer
 
 <body>
 
-  <div class="loader">
-    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-       width="34px" height="40px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
-      <rect x="0" y="10" width="4" height="10" fill="#333" opacity="0.2">
-        <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0s" dur="0.8s" repeatCount="indefinite" />
-        <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0s" dur="0.8s" repeatCount="indefinite" />
-        <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0s" dur="0.8s" repeatCount="indefinite" />
-      </rect>
-      <rect x="8" y="10" width="4" height="10" fill="#333"  opacity="0.2">
-        <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.15s" dur="0.8s" repeatCount="indefinite" />
-        <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.15s" dur="0.8s" repeatCount="indefinite" />
-        <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.15s" dur="0.8s" repeatCount="indefinite" />
-      </rect>
-      <rect x="16" y="10" width="4" height="10" fill="#333"  opacity="0.2">
-        <animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.3s" dur="0.8s" repeatCount="indefinite" />
-        <animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.3s" dur="0.8s" repeatCount="indefinite" />
-        <animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.3s" dur="0.8s" repeatCount="indefinite" />
-      </rect>
-    </svg>
-  </div>
+  
 
   <header id="#top">
       <nav class="main-navigation navbar navbar-expand-lg navbar-light">
@@ -62,7 +43,7 @@ https://templatemo.com/tm-572-designer
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link" href="index.html">My Home</a>
+                    <a class="nav-link " href="index.html">My Home</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="about.html">About Us</a>
@@ -70,9 +51,12 @@ https://templatemo.com/tm-572-designer
                   <li class="nav-item">
                     <a class="nav-link" href="trending.html">To Remember</a>
                   </li>
-                  <li class="nav-item ">
-                    <a class="nav-link active" href="contact.html">Relationship Check</a>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="contact.html">Check-In</a>
                   </li>
+                   <li class="nav-item">
+                    <a class="nav-link" href="explore.html">Themed Questions</a>
+                  </li> 
                 </ul>
               </div>
           </div>
@@ -92,7 +76,7 @@ https://templatemo.com/tm-572-designer
         </div>
     </div>
 
-    <section>
+    <section class="container mb-5">
 		<div class="button-rel" button onclick="spin()"><center>Click Me!</center></button>
 		<div id="question"></div>
     </section>
@@ -182,16 +166,6 @@ https://templatemo.com/tm-572-designer
   <script src="assets/js/tabs.js"></script>
   <script src="assets/js/popup.js"></script>
   <script src="assets/js/custom.js"></script>
-  <script>
-    setTimeout(function(){
-        $('.loader').fadeToggle();
-    }, 2000);
-	$("a[href='#top']").click(function() {
-        $("html, body").animate({ scrollTop: 0 }, "slow");
-        return false;
-    });
-
-    </script>
 
 </body>
 </html>
